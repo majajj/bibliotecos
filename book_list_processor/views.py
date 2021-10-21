@@ -116,13 +116,7 @@ def insert_into_book(inserted_title,
                     inserted_cover_link,
                     language_id,
                     author_id):
-    print(f"title={inserted_title}")
-    print(f'author={author_id}')
-    print(f'publication_date={inserted_publ_date}')
-    print(f'isbn={inserted_isbn}')
-    print(f'page_no={inserted_page_no}')
-    print(f'cover_link={inserted_cover_link}')
-    print(f'publication_language={language_id}')
+
     new_book = Books.objects.create(title=inserted_title,
                                     author_id=author_id,
                                     publication_date=inserted_publ_date,
