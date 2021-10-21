@@ -1,0 +1,14 @@
+{% extends "book_list_processor/layout.html" %}
+
+
+{% block body %}
+
+    <form action="{% url 'search' %}" method="get">
+        {% csrf_token %}
+        {{ form|linebreaks }}
+
+        <input class="btn btn-primary justify-content-center"
+            type="submit" value="Search" >
+    </form>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "book_list_processor/layout.html" %}
+
+
+{% block body %}
+    <h1>Search for a book</h1>
+    <a href="{% url 'books' %}">List of all books</a> </br>
+    <a href="{% url 'search' %}">search for a book</a> </br>
+        <form action="{% url 'search_keywords' %}" method="get">
+            {% csrf_token %}
+            {{ form|linebreaks }}
+            <input type="submit" value="submit">
+        </form>
+{% endblock %}

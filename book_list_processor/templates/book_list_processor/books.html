@@ -1,0 +1,35 @@
+{% extends "book_list_processor/layout.html" %}
+
+
+{% block body %}
+
+    <h1>List of books:</h1>
+        <table class="table">
+        <thead>
+            <tr>
+            <th scope="col">id</th>
+            <th scope="col">title</th>
+            <th scope="col">publication_date</th>
+            <th scope="col">isbn</th>
+            <th scope="col">page number</th>
+            <th scope="col">cover_link</th>
+            <th scope="col">author</th>
+            <th scope="col">publication_language</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for book in books %}
+                <tr>
+                <td>{{ book.id }}</td>
+                <td>{{ book.title }}</td>
+                <td>{{ book.publication_date }}</td>
+                <td>{{ book.isbn }}"</td>
+                <td>{{ book.page_no }}</td>
+                <td>{{ book.cover_link }}</td>
+                <td>{{ book.author }}</td>
+                <td>{{ book.publication_language }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        </table>
+{% endblock %}
