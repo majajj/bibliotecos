@@ -1,3 +1,4 @@
 requests>=2.25
 Django>=3.0,<4.0
 djangorestframework>=3.12
+pyhon>=3.8
